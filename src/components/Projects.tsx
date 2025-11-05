@@ -19,12 +19,19 @@ export default function Projects() {
 
   const otherProjects = filteredOtherProjects;
 
+  // Reset slide if current slide is out of bounds
+  const safeCurrentSlide = Math.min(currentSlide, Math.max(0, otherProjects.length - 1));
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % otherProjects.length);
+    if (otherProjects.length > 0) {
+      setCurrentSlide((prev) => (prev + 1) % otherProjects.length);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + otherProjects.length) % otherProjects.length);
+    if (otherProjects.length > 0) {
+      setCurrentSlide((prev) => (prev - 1 + otherProjects.length) % otherProjects.length);
+    }
   };
 
   return (
@@ -167,7 +174,7 @@ export default function Projects() {
               <div className="overflow-hidden">
                 <div
                   className="flex transition-transform duration-500 ease-in-out"
-                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                  style={{ transform: `translateX(-${safeCurrentSlide * 100}%)` }}
                 >
                   {otherProjects.map((project) => (
                     <div key={project.id} className="w-full flex-shrink-0 px-4">
@@ -273,7 +280,7 @@ export default function Projects() {
                       key={index}
                       onClick={() => setCurrentSlide(index)}
                       className={`w-3 h-3 rounded-full transition-all ${
-                        currentSlide === index
+                        safeCurrentSlide === index
                           ? 'bg-primary-500 w-8'
                           : 'bg-gray-600 hover:bg-gray-500'
                       }`}
