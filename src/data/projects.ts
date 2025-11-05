@@ -26,7 +26,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "React", "TypeScript", "Chart.js", "Tailwind CSS", "Instagram API", "Facebook API"],
     category: "Digital Marketing",
     githubUrl: "https://github.com/MuhammadLuqman-99/social-media-analytics-dashboard",
-    liveUrl: "#",
+    liveUrl: "https://social-media-analytics-dashboard-five.vercel.app/",
     featured: true,
     stats: {
       stars: 0,
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Chart.js", "Cheerio", "jsPDF", "Axios"],
     category: "Digital Marketing",
     githubUrl: "https://github.com/MuhammadLuqman-99/seo-audit-tool",
-    liveUrl: "#",
+    liveUrl: "https://seo-audit-tool.vercel.app/",
     featured: true,
     stats: {
       stars: 0,
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Framer Motion"],
     category: "Web Development",
     githubUrl: "https://github.com/MuhammadLuqman-99/landing-page-generator",
-    liveUrl: "#",
+    liveUrl: "https://landing-page-generator-vert.vercel.app/",
     featured: true,
     stats: {
       stars: 0,
