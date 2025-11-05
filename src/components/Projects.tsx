@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Image from 'next/image';
 import { projects, featuredProjects } from '@/data/projects';
 import { FaGithub, FaExternalLinkAlt, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -80,11 +81,14 @@ export default function Projects() {
               className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
             >
               {/* Project image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20">
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={800}
+                  height={600}
                   className="w-full h-full object-cover"
+                  unoptimized
                 />
                 <div className="absolute top-4 right-4 bg-yellow-500 text-dark-bg px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                   <FaStar /> Featured
@@ -186,14 +190,13 @@ export default function Projects() {
                         <div className="md:flex">
                           {/* Project image */}
                           <div className="relative md:w-1/2 h-64 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20">
-                            <img
+                            <Image
                               src={project.image}
                               alt={project.title}
+                              width={800}
+                              height={600}
                               className="w-full h-full object-cover"
-                              onError={(e) => {
-                                console.error('Image failed to load:', project.image);
-                                e.currentTarget.style.display = 'none';
-                              }}
+                              unoptimized
                             />
                           </div>
 
