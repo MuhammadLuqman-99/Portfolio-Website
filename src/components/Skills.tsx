@@ -1,6 +1,7 @@
-import { FaJs, FaReact, FaNode, FaHtml5, FaCss3Alt, FaGitAlt, FaGoogle, FaFacebook, FaInstagram, FaWordpress } from 'react-icons/fa';
-import { SiTypescript, SiNextdotjs, SiTailwindcss, SiSolidity, SiMongodb, SiFirebase, SiTailwindcss as SiBootstrap, SiExpress, SiMysql, SiEthereum, SiCanva, SiFigma, SiNotion, SiGoogleanalytics } from 'react-icons/si';
+import { FaJs, FaReact, FaNode, FaHtml5, FaCss3Alt, FaGitAlt, FaGoogle, FaFacebook, FaInstagram, FaWordpress, FaRobot, FaBrain } from 'react-icons/fa';
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiSolidity, SiMongodb, SiFirebase, SiTailwindcss as SiBootstrap, SiExpress, SiMysql, SiEthereum, SiCanva, SiFigma, SiNotion, SiGoogleanalytics, SiOpenai } from 'react-icons/si';
 import { MdEmail } from 'react-icons/md';
+import { TbBrain } from 'react-icons/tb';
 
 export default function Skills() {
   const skillCategories = [
@@ -50,6 +51,17 @@ export default function Skills() {
         { name: 'Figma', icon: <SiFigma />, level: 80, color: 'text-purple-400' },
         { name: 'Git', icon: <FaGitAlt />, level: 90, color: 'text-orange-500' },
         { name: 'WordPress', icon: <FaWordpress />, level: 85, color: 'text-blue-400' },
+      ]
+    },
+    {
+      title: 'AI & LLM Tools',
+      skills: [
+        { name: 'ChatGPT', icon: <SiOpenai />, level: 95, color: 'text-green-400' },
+        { name: 'Claude AI', icon: <FaBrain />, level: 95, color: 'text-purple-400' },
+        { name: 'Gemini', icon: <FaRobot />, level: 85, color: 'text-blue-400' },
+        { name: 'DeepSeek', icon: <TbBrain />, level: 80, color: 'text-cyan-400' },
+        { name: 'Florafauna.ai', icon: <FaBrain />, level: 85, color: 'text-green-300' },
+        { name: 'Gwen (Local LLM)', icon: <FaRobot />, level: 75, color: 'text-orange-400' },
       ]
     }
   ];
