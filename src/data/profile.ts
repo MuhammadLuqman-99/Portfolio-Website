@@ -58,9 +58,10 @@ export const profileData = {
       description: "Social Media Management & Marketing (Facebook, Instagram), SEO & Content Strategy, Google Ads & Facebook Ads Management, Email Marketing Campaigns, Brand Strategy & Development, Analytics & Performance Tracking, E-commerce Marketing Solutions",
       icon: "📊",
       features: [
-        "Social Media Management (Facebook, Instagram)",
+        "Social Media Management (Facebook, Instagram, TikTok)",
         "SEO & Content Strategy",
-        "Google Ads & Facebook Ads Management",
+        "Google Ads & Meta Ads Management",
+        "TikTok Ads & Shopee Ads Campaigns",
         "Email Marketing Campaigns",
         "Brand Strategy & Development",
         "Analytics & Performance Tracking",

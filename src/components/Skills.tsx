@@ -11,8 +11,9 @@ export default function Skills() {
         { name: 'SEO', icon: <FaGoogle />, level: 90, color: 'text-green-400' },
         { name: 'Google Analytics', icon: <SiGoogleanalytics />, level: 85, color: 'text-orange-400' },
         { name: 'Google Ads', icon: <FaGoogle />, level: 85, color: 'text-blue-400' },
-        { name: 'Facebook Ads', icon: <FaFacebook />, level: 90, color: 'text-blue-500' },
-        { name: 'Instagram Marketing', icon: <FaInstagram />, level: 90, color: 'text-pink-400' },
+        { name: 'Meta Ads', icon: <FaFacebook />, level: 90, color: 'text-blue-500' },
+        { name: 'TikTok Ads', icon: <FaInstagram />, level: 85, color: 'text-pink-400' },
+        { name: 'Shopee Ads', icon: <FaInstagram />, level: 80, color: 'text-orange-500' },
         { name: 'Email Marketing', icon: <MdEmail />, level: 80, color: 'text-red-400' },
       ]
     },
