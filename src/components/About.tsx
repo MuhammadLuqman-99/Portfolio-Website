@@ -1,5 +1,6 @@
 import { profileData } from '@/data/profile';
 import { FaBriefcase, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -16,9 +17,14 @@ export default function About() {
           {/* Left side - Image */}
           <div className="relative">
             <div className="aspect-square rounded-2xl overflow-hidden glass glow">
-              <div className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center">
-                <span className="text-8xl">👨‍💻</span>
-              </div>
+              <Image
+                src="/images/avatar.jpg"
+                alt="Muhammad Luqman"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
+                priority
+              />
             </div>
             {/* Floating elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/20 rounded-full blur-xl animate-pulse"></div>
