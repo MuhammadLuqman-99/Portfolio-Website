@@ -19,6 +19,10 @@ export default function Projects() {
 
   const otherProjects = filteredOtherProjects;
 
+  // Debug log
+  console.log('Filter:', filter);
+  console.log('Filtered Other Projects:', otherProjects.map(p => ({ title: p.title, category: p.category })));
+
   // Reset slide if current slide is out of bounds
   const safeCurrentSlide = Math.min(currentSlide, Math.max(0, otherProjects.length - 1));
 
@@ -181,11 +185,15 @@ export default function Projects() {
                       <div className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group max-w-4xl mx-auto">
                         <div className="md:flex">
                           {/* Project image */}
-                          <div className="relative md:w-1/2 h-64 overflow-hidden">
+                          <div className="relative md:w-1/2 h-64 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20">
                             <img
                               src={project.image}
                               alt={project.title}
                               className="w-full h-full object-cover"
+                              onError={(e) => {
+                                console.error('Image failed to load:', project.image);
+                                e.currentTarget.style.display = 'none';
+                              }}
                             />
                           </div>
 
