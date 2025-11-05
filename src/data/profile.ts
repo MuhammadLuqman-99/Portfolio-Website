@@ -4,7 +4,7 @@ export const profileData = {
   subtitle: "Transforming Ideas into Digital Solutions",
   tagline: "Menggabungkan kemahiran teknikal dengan strategi pemasaran digital untuk membantu perniagaan berkembang",
 
-  bio: "Digital Marketing & IT Developer di Desa Murni Batik. Fokus pada Digital Marketing Strategy & Full Stack Development dengan kepakaran dalam Social Media Marketing, SEO, Web Development & E-commerce. Saya menggabungkan teknologi moden dengan strategi pemasaran digital untuk membantu perniagaan berkembang.",
+  bio: "Digital Marketing & IT Developer di Desa Murni Batik dengan 7 tahun pengalaman gabungan (3 tahun Digital Marketing, 4 tahun IT Development). Fokus pada Digital Marketing Strategy & Full Stack Development dengan kepakaran dalam Social Media Marketing, SEO, Web Development & E-commerce. Saya menggabungkan teknologi moden dengan strategi pemasaran digital untuk membantu perniagaan berkembang.",
 
   location: "Malaysia",
   email: "muhammadluqmanjobs@gmail.com",
@@ -18,7 +18,7 @@ export const profileData = {
   avatar: "/images/avatar.jpg",
 
   stats: {
-    yearsExperience: 2,
+    yearsExperience: 7, // 3 years Digital Marketing + 4 years IT Development
     projectsCompleted: 50,
     happyClients: 15,
     repositories: 43
@@ -31,11 +31,39 @@ export const profileData = {
     description: "Managing digital marketing campaigns, web development projects, and IT infrastructure"
   },
 
+  experience: {
+    digitalMarketing: {
+      years: 3,
+      skills: [
+        "Digital Marketing Strategy",
+        "Social Media Marketing (Facebook, Instagram, TikTok)",
+        "SEO & Content Marketing",
+        "Google Ads & Meta Ads Management",
+        "TikTok Ads & Shopee Ads",
+        "Email Marketing & Automation",
+        "Analytics & Performance Tracking"
+      ]
+    },
+    itDevelopment: {
+      years: 4,
+      skills: [
+        "Full Stack Web Development",
+        "React & Next.js Applications",
+        "Blockchain & Web3 Development",
+        "E-commerce Solutions",
+        "API Development & Integration",
+        "Database Management",
+        "UI/UX Implementation"
+      ]
+    }
+  },
+
   expertise: [
-    "Digital Marketing Strategy",
-    "Social Media Marketing (Facebook, Instagram)",
+    "Digital Marketing Strategy (3 years)",
+    "IT Development (4 years)",
+    "Social Media Marketing (Facebook, Instagram, TikTok)",
     "SEO & Content Marketing",
-    "Google Ads & Facebook Ads Management",
+    "Google Ads & Meta Ads Management",
     "Full Stack Web Development",
     "Blockchain & Web3 Development",
     "E-commerce Solutions",
