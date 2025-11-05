@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import { projects, featuredProjects } from '@/data/projects';
 import { FaGithub, FaExternalLinkAlt, FaStar, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -19,10 +18,6 @@ export default function Projects() {
     : projects.filter(p => !p.featured && p.category === filter);
 
   const otherProjects = filteredOtherProjects;
-
-  // Debug log
-  console.log('Filter:', filter);
-  console.log('Filtered Other Projects:', otherProjects.map(p => ({ title: p.title, category: p.category })));
 
   // Reset slide if current slide is out of bounds
   const safeCurrentSlide = Math.min(currentSlide, Math.max(0, otherProjects.length - 1));
@@ -81,14 +76,12 @@ export default function Projects() {
               className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
             >
               {/* Project image */}
-              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20">
-                <Image
+              <div className="relative h-48 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center">
+                <img
                   src={project.image}
                   alt={project.title}
-                  width={800}
-                  height={600}
                   className="w-full h-full object-cover"
-                  unoptimized
+                  loading="eager"
                 />
                 <div className="absolute top-4 right-4 bg-yellow-500 text-dark-bg px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
                   <FaStar /> Featured
@@ -189,14 +182,12 @@ export default function Projects() {
                       <div className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group max-w-4xl mx-auto">
                         <div className="md:flex">
                           {/* Project image */}
-                          <div className="relative md:w-1/2 h-64 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20">
-                            <Image
+                          <div className="relative md:w-1/2 h-64 overflow-hidden bg-gradient-to-br from-primary-600/20 to-primary-800/20 flex items-center justify-center">
+                            <img
                               src={project.image}
                               alt={project.title}
-                              width={800}
-                              height={600}
                               className="w-full h-full object-cover"
-                              unoptimized
+                              loading="eager"
                             />
                           </div>
 
