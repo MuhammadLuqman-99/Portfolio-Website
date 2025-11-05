@@ -4,8 +4,20 @@ import { FaGithub, FaExternalLinkAlt, FaStar, FaChevronLeft, FaChevronRight } fr
 
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [filter, setFilter] = useState<string>('All');
 
-  const otherProjects = projects.filter(p => !p.featured);
+  const categories = ['All', 'Digital Marketing', 'Web Development', 'Blockchain', 'Full Stack'];
+
+  // Filter projects based on selected category
+  const filteredFeaturedProjects = filter === 'All'
+    ? featuredProjects
+    : featuredProjects.filter(p => p.category === filter);
+
+  const filteredOtherProjects = filter === 'All'
+    ? projects.filter(p => !p.featured)
+    : projects.filter(p => !p.featured && p.category === filter);
+
+  const otherProjects = filteredOtherProjects;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % otherProjects.length);
@@ -25,12 +37,33 @@ export default function Projects() {
           <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
             Showcase of my recent work combining marketing strategy and technical development
           </p>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+          <div className="w-20 h-1 bg-primary-500 mx-auto mb-8"></div>
+
+          {/* Category Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => {
+                  setFilter(category);
+                  setCurrentSlide(0); // Reset carousel when filter changes
+                }}
+                className={`px-6 py-2.5 rounded-lg font-semibold transition-all duration-300 ${
+                  filter === category
+                    ? 'bg-primary-600 text-white glow scale-105'
+                    : 'glass hover:bg-white/10 text-gray-300 hover:scale-105'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredProjects.map((project) => (
+        {filteredFeaturedProjects.length > 0 && (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {filteredFeaturedProjects.map((project) => (
             <div
               key={project.id}
               className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
@@ -106,7 +139,21 @@ export default function Projects() {
               </div>
             </div>
           ))}
-        </div>
+          </div>
+        )}
+
+        {/* No results message */}
+        {filteredFeaturedProjects.length === 0 && otherProjects.length === 0 && (
+          <div className="text-center py-12 mb-16">
+            <p className="text-gray-400 text-lg">No projects found in this category.</p>
+            <button
+              onClick={() => setFilter('All')}
+              className="mt-4 px-6 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg transition-all"
+            >
+              View All Projects
+            </button>
+          </div>
+        )}
 
         {/* Other Projects Carousel */}
         {otherProjects.length > 0 && (
