@@ -1,10 +1,10 @@
 export const profileData = {
   name: "Muhammad Luqman",
-  title: "Digital Marketer & Full Stack Developer",
+  title: "Digital Marketer & IT Developer",
   subtitle: "Transforming Ideas into Digital Solutions",
-  tagline: "I combine technical expertise with marketing strategy to build impactful digital experiences",
+  tagline: "Menggabungkan kemahiran teknikal dengan strategi pemasaran digital untuk membantu perniagaan berkembang",
 
-  bio: "Digital Marketing & IT Support professional at Desa Murni Batik, specializing in social media marketing, web development, and blockchain solutions. I bridge the gap between technology and marketing to help businesses grow.",
+  bio: "Digital Marketing & IT Developer di Desa Murni Batik. Fokus pada Digital Marketing Strategy & Full Stack Development dengan kepakaran dalam Social Media Marketing, SEO, Web Development & E-commerce. Saya menggabungkan teknologi moden dengan strategi pemasaran digital untuk membantu perniagaan berkembang.",
 
   location: "Malaysia",
   email: "muhammadluqmanjobs@gmail.com",
@@ -12,54 +12,106 @@ export const profileData = {
   socials: {
     github: "https://github.com/MuhammadLuqman-99",
     facebook: "https://www.facebook.com/Muhammadluqman1999",
-    linkedin: "", // Add when available
+    linkedin: "",
   },
 
-  avatar: "/images/avatar.jpg", // You'll add your photo later
+  avatar: "/images/avatar.jpg",
 
   stats: {
     yearsExperience: 2,
-    projectsCompleted: 43,
-    happyClients: 10,
+    projectsCompleted: 50,
+    happyClients: 15,
     repositories: 43
   },
 
   currentPosition: {
     company: "Desa Murni Batik",
-    role: "Digital Marketing & IT Support",
+    role: "Digital Marketing & IT Developer",
     duration: "Present",
-    description: "Managing digital marketing campaigns, social media presence, and IT infrastructure"
+    description: "Managing digital marketing campaigns, web development projects, and IT infrastructure"
   },
 
   expertise: [
     "Digital Marketing Strategy",
-    "Social Media Marketing",
+    "Social Media Marketing (Facebook, Instagram)",
     "SEO & Content Marketing",
+    "Google Ads & Facebook Ads Management",
     "Full Stack Web Development",
-    "Blockchain & Web3",
-    "UI/UX Design"
+    "Blockchain & Web3 Development",
+    "E-commerce Solutions",
+    "Analytics & Performance Tracking"
   ],
+
+  techStack: {
+    programming: ["JavaScript", "Solidity", "HTML5", "CSS3"],
+    frontend: ["React", "Next.js", "Bootstrap", "Tailwind CSS", "SASS"],
+    backend: ["Node.js", "Express", "MongoDB", "MySQL"],
+    blockchain: ["Solidity", "Ethereum", "Web3.js", "Hardhat", "Chainlink"],
+    marketing: ["SEO", "Google Analytics", "Google Ads", "Facebook Ads", "Instagram Marketing", "Email Marketing"],
+    design: ["Canva", "Photoshop", "Figma"],
+    tools: ["Git", "GitHub", "VS Code", "Notion"]
+  },
 
   services: [
     {
       title: "Digital Marketing",
-      description: "Social media management, SEO, Google Ads, Facebook Ads, and content strategy",
-      icon: "📊"
+      description: "Social Media Management & Marketing (Facebook, Instagram), SEO & Content Strategy, Google Ads & Facebook Ads Management, Email Marketing Campaigns, Brand Strategy & Development, Analytics & Performance Tracking, E-commerce Marketing Solutions",
+      icon: "📊",
+      features: [
+        "Social Media Management (Facebook, Instagram)",
+        "SEO & Content Strategy",
+        "Google Ads & Facebook Ads Management",
+        "Email Marketing Campaigns",
+        "Brand Strategy & Development",
+        "Analytics & Performance Tracking",
+        "E-commerce Marketing Solutions"
+      ]
     },
     {
       title: "Web Development",
-      description: "Responsive websites, web applications, e-commerce solutions using modern technologies",
-      icon: "💻"
+      description: "Responsive Website Development, E-commerce Solutions, Landing Page Design & Optimization, Web Application Development, CMS Integration, API Integration & Development",
+      icon: "💻",
+      features: [
+        "Responsive Website Development",
+        "E-commerce Solutions (Shopify, WooCommerce)",
+        "Landing Page Design & Optimization",
+        "Web Application Development (React, Next.js)",
+        "CMS Integration (WordPress)",
+        "API Integration & Development"
+      ]
     },
     {
       title: "Blockchain & Web3",
-      description: "Smart contract development, DApp creation, NFT projects, and Web3 integration",
-      icon: "⛓️"
+      description: "Smart Contract Development, DApp Development & Integration, DeFi Protocol Implementation, NFT Projects & Marketplaces, Web3 Integration, Chainlink Oracle Integration",
+      icon: "⛓️",
+      features: [
+        "Smart Contract Development (Solidity)",
+        "DApp Development & Integration",
+        "DeFi Protocol Implementation",
+        "NFT Projects & Marketplaces",
+        "Web3 Integration for Existing Websites",
+        "Chainlink Oracle Integration",
+        "Token & ICO Consultation"
+      ]
     },
     {
       title: "Consultation",
-      description: "Digital transformation, IT infrastructure, and marketing technology integration",
-      icon: "💡"
+      description: "Digital Transformation Strategy, IT Infrastructure Setup, Marketing Technology Integration",
+      icon: "💡",
+      features: [
+        "Digital Transformation Strategy",
+        "IT Infrastructure Setup",
+        "Marketing Technology Integration"
+      ]
     }
+  ],
+
+  achievements: [
+    "43+ Repositories focused on Web3 & Blockchain Development",
+    "DeFi Integration with Aave Protocol implementation",
+    "Chainlink Oracles for decentralized lottery systems",
+    "Smart Contract Development with Hardhat & Solidity",
+    "Web3 dApps with TypeScript & JavaScript",
+    "IoTeX Blockchain integration and testing"
   ]
 };
