@@ -24,48 +24,61 @@
   <rect x="50" y="80" width="700" height="440" rx="20" fill="#0f172a" opacity="0.95"/>
 
   <!-- Header -->
-  <text x="400" y="140" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#eab308" text-anchor="middle">KILAT</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#eab308" text-anchor="middle">KILAT LMS</text>
 
-  <!-- Lightning Icon -->
-  <path d="M 380 180 L 400 160 L 390 200 L 410 200 L 390 240 L 400 210 L 380 210 Z" fill="#eab308" opacity="0.8"/>
+  <!-- Brain/AI Icon -->
+  <circle cx="400" cy="190" r="25" fill="none" stroke="#eab308" stroke-width="3"/>
+  <circle cx="390" cy="185" r="4" fill="#eab308"/>
+  <circle cx="410" cy="185" r="4" fill="#eab308"/>
+  <path d="M 385 200 Q 400 210 415 200" stroke="#eab308" stroke-width="3" fill="none"/>
 
   <!-- Tagline -->
-  <text x="400" y="270" font-family="Arial, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Lightning Fast Delivery Service</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="18" fill="#94a3b8" text-anchor="middle">Master AI & Prompt Engineering</text>
 
-  <!-- Features -->
+  <!-- Course Cards -->
   <g>
-    <!-- Feature 1 -->
-    <rect x="100" y="310" width="180" height="80" rx="12" fill="#eab308" opacity="0.2"/>
-    <rect x="100" y="310" width="180" height="80" rx="12" fill="none" stroke="#eab308" stroke-width="2"/>
-    <text x="190" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Quick Pickup</text>
-    <text x="190" y="370" font-family="Arial, sans-serif" font-size="12" fill="#fde047" text-anchor="middle">15 min response</text>
+    <!-- Course 1 -->
+    <rect x="80" y="280" width="200" height="100" rx="12" fill="#eab308" opacity="0.2"/>
+    <rect x="80" y="280" width="200" height="100" rx="12" fill="none" stroke="#eab308" stroke-width="2"/>
+    <text x="180" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">ChatGPT Mastery</text>
+    <text x="180" y="335" font-family="Arial, sans-serif" font-size="12" fill="#fde047" text-anchor="middle">12 Lessons</text>
+    <rect x="100" y="350" width="160" height="8" rx="4" fill="#1e293b"/>
+    <rect x="100" y="350" width="120" height="8" rx="4" fill="#eab308"/>
 
-    <!-- Feature 2 -->
-    <rect x="310" y="310" width="180" height="80" rx="12" fill="#f97316" opacity="0.2"/>
-    <rect x="310" y="310" width="180" height="80" rx="12" fill="none" stroke="#f97316" stroke-width="2"/>
-    <text x="400" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Track Live</text>
-    <text x="400" y="370" font-family="Arial, sans-serif" font-size="12" fill="#fdba74" text-anchor="middle">Real-time GPS</text>
+    <!-- Course 2 -->
+    <rect x="300" y="280" width="200" height="100" rx="12" fill="#f97316" opacity="0.2"/>
+    <rect x="300" y="280" width="200" height="100" rx="12" fill="none" stroke="#f97316" stroke-width="2"/>
+    <text x="400" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Prompt Engineering</text>
+    <text x="400" y="335" font-family="Arial, sans-serif" font-size="12" fill="#fdba74" text-anchor="middle">8 Lessons</text>
+    <rect x="320" y="350" width="160" height="8" rx="4" fill="#1e293b"/>
+    <rect x="320" y="350" width="80" height="8" rx="4" fill="#f97316"/>
 
-    <!-- Feature 3 -->
-    <rect x="520" y="310" width="180" height="80" rx="12" fill="#10b981" opacity="0.2"/>
-    <rect x="520" y="310" width="180" height="80" rx="12" fill="none" stroke="#10b981" stroke-width="2"/>
-    <text x="610" y="340" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Same Day</text>
-    <text x="610" y="370" font-family="Arial, sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle">Express delivery</text>
+    <!-- Course 3 -->
+    <rect x="520" y="280" width="200" height="100" rx="12" fill="#10b981" opacity="0.2"/>
+    <rect x="520" y="280" width="200" height="100" rx="12" fill="none" stroke="#10b981" stroke-width="2"/>
+    <text x="620" y="310" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Claude AI Basics</text>
+    <text x="620" y="335" font-family="Arial, sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle">10 Lessons</text>
+    <rect x="540" y="350" width="160" height="8" rx="4" fill="#1e293b"/>
+    <rect x="540" y="350" width="50" height="8" rx="4" fill="#10b981"/>
   </g>
 
   <!-- Stats -->
   <g>
-    <text x="200" y="440" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#eab308" text-anchor="middle">1000+</text>
-    <text x="200" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Deliveries</text>
+    <rect x="80" y="410" width="200" height="80" rx="12" fill="#1e293b"/>
+    <text x="180" y="440" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#eab308" text-anchor="middle">500+</text>
+    <text x="180" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Students Enrolled</text>
 
-    <text x="400" y="440" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#f97316" text-anchor="middle">4.9★</text>
-    <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Rating</text>
+    <rect x="300" y="410" width="200" height="80" rx="12" fill="#1e293b"/>
+    <text x="400" y="440" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#f97316" text-anchor="middle">30+</text>
+    <text x="400" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">AI Courses</text>
 
-    <text x="600" y="440" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#10b981" text-anchor="middle">24/7</text>
-    <text x="600" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Available</text>
+    <rect x="520" y="410" width="200" height="80" rx="12" fill="#1e293b"/>
+    <text x="620" y="440" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#10b981" text-anchor="middle">4.8★</text>
+    <text x="620" y="470" font-family="Arial, sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Average Rating</text>
   </g>
 
-  <!-- Decorative Lightning Bolts -->
-  <path d="M 120 500 L 125 495 L 122 505 L 127 505 L 122 515 L 125 507 L 120 507 Z" fill="#eab308" opacity="0.3"/>
-  <path d="M 680 500 L 685 495 L 682 505 L 687 505 L 682 515 L 685 507 L 680 507 Z" fill="#f97316" opacity="0.3"/>
+  <!-- Decorative Elements -->
+  <circle cx="120" cy="250" r="8" fill="#eab308" opacity="0.3"/>
+  <circle cx="680" cy="250" r="10" fill="#f97316" opacity="0.3"/>
+  <rect x="150" y="245" width="30" height="3" rx="2" fill="#10b981" opacity="0.3"/>
 </svg>
