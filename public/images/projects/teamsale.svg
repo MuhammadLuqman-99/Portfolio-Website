@@ -1,0 +1,62 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="bgGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient5)"/>
+
+  <!-- Grid Pattern -->
+  <g opacity="0.1">
+    <line x1="0" y1="150" x2="800" y2="150" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="300" x2="800" y2="300" stroke="white" stroke-width="1"/>
+    <line x1="0" y1="450" x2="800" y2="450" stroke="white" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="white" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="white" stroke-width="1"/>
+  </g>
+
+  <!-- Main Container -->
+  <rect x="50" y="80" width="700" height="440" rx="20" fill="#0f172a" opacity="0.95"/>
+
+  <!-- Header Section -->
+  <rect x="50" y="80" width="700" height="80" rx="20" fill="#1e293b"/>
+  <text x="400" y="130" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">TeamSale</text>
+
+  <!-- Hero Section -->
+  <text x="400" y="210" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#06b6d4" text-anchor="middle">Sales Management Platform</text>
+  <text x="400" y="245" font-family="Arial, sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Streamline your team's sales process</text>
+
+  <!-- Feature Cards -->
+  <g>
+    <!-- Feature 1 -->
+    <rect x="80" y="280" width="190" height="100" rx="12" fill="#06b6d4" opacity="0.2"/>
+    <rect x="80" y="280" width="190" height="100" rx="12" fill="none" stroke="#06b6d4" stroke-width="2"/>
+    <text x="175" y="315" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Lead Management</text>
+    <text x="175" y="345" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Track & convert</text>
+
+    <!-- Feature 2 -->
+    <rect x="305" y="280" width="190" height="100" rx="12" fill="#3b82f6" opacity="0.2"/>
+    <rect x="305" y="280" width="190" height="100" rx="12" fill="none" stroke="#3b82f6" stroke-width="2"/>
+    <text x="400" y="315" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Analytics</text>
+    <text x="400" y="345" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Real-time insights</text>
+
+    <!-- Feature 3 -->
+    <rect x="530" y="280" width="190" height="100" rx="12" fill="#10b981" opacity="0.2"/>
+    <rect x="530" y="280" width="190" height="100" rx="12" fill="none" stroke="#10b981" stroke-width="2"/>
+    <text x="625" y="315" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Team Collab</text>
+    <text x="625" y="345" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">Work together</text>
+  </g>
+
+  <!-- CTA Button -->
+  <rect x="325" y="420" width="150" height="50" rx="25" fill="#06b6d4"/>
+  <text x="400" y="452" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Get Started</text>
+
+  <!-- Decorative Elements -->
+  <circle cx="700" cy="120" r="15" fill="#06b6d4" opacity="0.3"/>
+  <circle cx="100" cy="120" r="20" fill="#3b82f6" opacity="0.3"/>
+</svg>

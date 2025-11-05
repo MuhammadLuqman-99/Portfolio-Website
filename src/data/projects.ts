@@ -68,6 +68,74 @@ export const projects: Project[] = [
       watchers: 0
     }
   },
+  {
+    id: 4,
+    title: "Durian Dashboard",
+    description: "Full-stack Laravel & Next.js dashboard for durian business management with real-time analytics",
+    longDescription: "Comprehensive dashboard combining Laravel backend with Next.js frontend for managing durian sales, inventory, and orders. Features include real-time analytics, order tracking, product management, and sales reporting. Perfect for agricultural e-commerce businesses.",
+    image: "/images/projects/durian-dashboard.svg",
+    technologies: ["Laravel", "Next.js", "React", "MySQL", "Tailwind CSS", "API Integration"],
+    category: "Full Stack",
+    githubUrl: "#",
+    liveUrl: "https://laravel-dan-next-js-durian.vercel.app/dashboard",
+    featured: false,
+    stats: {
+      stars: 0,
+      forks: 0,
+      watchers: 0
+    }
+  },
+  {
+    id: 5,
+    title: "TeamSale Platform",
+    description: "Sales management platform for team collaboration and lead tracking",
+    longDescription: "Complete sales management platform designed for teams to collaborate effectively. Features include lead management, sales pipeline tracking, team collaboration tools, real-time analytics, and performance dashboards. Streamlines the entire sales process from lead to conversion.",
+    image: "/images/projects/teamsale.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Firebase"],
+    category: "Web Development",
+    githubUrl: "#",
+    liveUrl: "https://teamsale-website.vercel.app/",
+    featured: false,
+    stats: {
+      stars: 0,
+      forks: 0,
+      watchers: 0
+    }
+  },
+  {
+    id: 6,
+    title: "Product Catalog System",
+    description: "Modern e-commerce catalog system with dynamic product showcase and filtering",
+    longDescription: "Professional product catalog system with dynamic product display, advanced filtering, search functionality, and responsive grid layout. Features include product categorization, price filtering, image galleries, and cart integration. Optimized for both desktop and mobile shopping experiences.",
+    image: "/images/projects/catalog.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "E-commerce API"],
+    category: "Web Development",
+    githubUrl: "#",
+    liveUrl: "https://new-catalog-website.vercel.app/catalog",
+    featured: false,
+    stats: {
+      stars: 0,
+      forks: 0,
+      watchers: 0
+    }
+  },
+  {
+    id: 7,
+    title: "Kilat Delivery Service",
+    description: "Lightning-fast delivery service platform with real-time tracking and quick pickup",
+    longDescription: "Modern delivery service platform featuring real-time GPS tracking, instant pickup requests, same-day delivery options, and live order status updates. Includes customer dashboard, delivery tracking map, pricing calculator, and 24/7 service availability. Built for speed and reliability.",
+    image: "/images/projects/kilat.svg",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Maps API", "Real-time DB"],
+    category: "Web Development",
+    githubUrl: "#",
+    liveUrl: "https://kilat-murex.vercel.app/",
+    featured: false,
+    stats: {
+      stars: 0,
+      forks: 0,
+      watchers: 0
+    }
+  },
 ];
 
 export const featuredProjects = projects.filter(project => project.featured);
