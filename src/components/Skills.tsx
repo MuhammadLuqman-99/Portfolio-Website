@@ -8,13 +8,13 @@ export default function Skills() {
     {
       title: 'Digital Marketing',
       skills: [
-        { name: 'SEO', icon: <FaGoogle />, level: 90, color: 'text-green-400' },
-        { name: 'Google Analytics', icon: <SiGoogleanalytics />, level: 85, color: 'text-orange-400' },
-        { name: 'Google Ads', icon: <FaGoogle />, level: 85, color: 'text-blue-400' },
-        { name: 'Meta Ads', icon: <FaFacebook />, level: 90, color: 'text-blue-500' },
-        { name: 'TikTok Ads', icon: <FaInstagram />, level: 85, color: 'text-pink-400' },
-        { name: 'Shopee Ads', icon: <FaInstagram />, level: 80, color: 'text-orange-500' },
-        { name: 'Email Marketing', icon: <MdEmail />, level: 80, color: 'text-red-400' },
+        { name: 'SEO', icon: <FaGoogle />, level: 100, color: 'text-green-400' },
+        { name: 'Google Analytics', icon: <SiGoogleanalytics />, level: 100, color: 'text-orange-400' },
+        { name: 'Google Ads', icon: <FaGoogle />, level: 100, color: 'text-blue-400' },
+        { name: 'Meta Ads', icon: <FaFacebook />, level: 100, color: 'text-blue-500' },
+        { name: 'TikTok Ads', icon: <FaInstagram />, level: 100, color: 'text-pink-400' },
+        { name: 'Shopee Ads', icon: <FaInstagram />, level: 100, color: 'text-orange-500' },
+        { name: 'Email Marketing', icon: <MdEmail />, level: 100, color: 'text-red-400' },
       ]
     },
     {
@@ -57,12 +57,12 @@ export default function Skills() {
     {
       title: 'AI & LLM Tools',
       skills: [
-        { name: 'ChatGPT', icon: <SiOpenai />, level: 95, color: 'text-green-400' },
-        { name: 'Claude AI', icon: <FaBrain />, level: 95, color: 'text-purple-400' },
-        { name: 'Gemini', icon: <FaRobot />, level: 85, color: 'text-blue-400' },
-        { name: 'DeepSeek', icon: <TbBrain />, level: 80, color: 'text-cyan-400' },
-        { name: 'Florafauna.ai', icon: <FaBrain />, level: 85, color: 'text-green-300' },
-        { name: 'Gwen (Local LLM)', icon: <FaRobot />, level: 75, color: 'text-orange-400' },
+        { name: 'ChatGPT', icon: <SiOpenai />, level: 100, color: 'text-green-400' },
+        { name: 'Claude AI', icon: <FaBrain />, level: 100, color: 'text-purple-400' },
+        { name: 'Gemini', icon: <FaRobot />, level: 100, color: 'text-blue-400' },
+        { name: 'DeepSeek', icon: <TbBrain />, level: 100, color: 'text-cyan-400' },
+        { name: 'Florafauna.ai', icon: <FaBrain />, level: 100, color: 'text-green-300' },
+        { name: 'Gwen (Local LLM)', icon: <FaRobot />, level: 100, color: 'text-orange-400' },
       ]
     }
   ];
