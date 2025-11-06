@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaGithub, FaFacebook, FaLinkedin, FaArrowDown } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaLinkedin, FaArrowDown, FaDownload } from 'react-icons/fa';
 import { profileData } from '@/data/profile';
 
 export default function Hero() {
@@ -81,6 +81,14 @@ export default function Hero() {
             className="px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 glow"
           >
             View My Work
+          </a>
+          <a
+            href="/documents/Muhammad_Luqman_Resume.pdf"
+            download
+            className="px-8 py-4 glass hover:bg-white/10 text-white font-semibold rounded-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2"
+          >
+            <FaDownload />
+            Download Resume
           </a>
           <a
             href="#contact"
