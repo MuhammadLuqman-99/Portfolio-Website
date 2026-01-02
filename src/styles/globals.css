@@ -105,12 +105,9 @@ body {
   animation: blink 1s infinite;
 }
 
-/* Grid pattern background */
+/* Grid pattern background - removed for cleaner look */
 .grid-pattern {
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-  background-size: 60px 60px;
+  background: transparent;
 }
 
 /* Noise texture overlay */
