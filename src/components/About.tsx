@@ -1,81 +1,111 @@
 import { profileData } from '@/data/profile';
 import Image from 'next/image';
+import { FaBriefcase, FaMapMarkerAlt, FaEnvelope, FaCheckCircle } from 'react-icons/fa';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+    <section id="about" className="py-20 px-4 md:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="mb-16">
-          <span className="font-mono text-sm text-neutral-500 tracking-wider">// about</span>
-          <h2 className="text-4xl md:text-5xl font-light mt-4">
-            About Me
+        <div className="text-center mb-16">
+          <span className="badge mb-4 inline-block">About Me</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            React Developer &
+            <br />
+            <span className="gradient-text">Full-Stack Expert</span>
           </h2>
-          <div className="accent-line mt-6"></div>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            {profileData.tagline}
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Image */}
           <div className="relative">
-            <div className="aspect-square overflow-hidden bg-neutral-900">
-              <Image
-                src="/images/avatar.jpg"
-                alt="Muhammad Luqman"
-                width={500}
-                height={500}
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                priority
-              />
+            <div className="relative aspect-square max-w-md mx-auto">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-accent-purple/20 rounded-3xl transform rotate-6"></div>
+
+              {/* Image container */}
+              <div className="relative bg-dark-700 rounded-3xl overflow-hidden border border-dark-600">
+                <Image
+                  src="/images/avatar.jpg"
+                  alt="Muhammad Luqman"
+                  width={500}
+                  height={500}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Experience badge */}
+              <div className="absolute -bottom-4 -right-4 bg-dark-700 border border-dark-600 rounded-2xl p-4 shadow-lg">
+                <div className="text-3xl font-bold text-primary-400">{profileData.stats.yearsExperience}+</div>
+                <div className="text-gray-400 text-sm">Years Experience</div>
+              </div>
             </div>
-            {/* Decorative corner */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border border-neutral-800 -z-10"></div>
           </div>
 
           {/* Right side - Content */}
           <div>
-            <h3 className="text-2xl font-light mb-6 text-neutral-200">
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">
               {profileData.title}
             </h3>
 
-            <p className="text-neutral-500 leading-relaxed mb-8">
+            <p className="text-gray-400 leading-relaxed mb-8">
               {profileData.bio}
             </p>
 
-            {/* Info grid */}
-            <div className="space-y-4 mb-10">
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-600 font-mono text-sm w-24">Role</span>
-                <span className="text-neutral-300">{profileData.currentPosition.role}</span>
+            {/* Info cards */}
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="bg-dark-700/50 border border-dark-600 rounded-xl p-4 flex items-center gap-4">
+                <div className="icon-box">
+                  <FaBriefcase className="text-white" />
+                </div>
+                <div>
+                  <div className="text-gray-400 text-sm">Current Role</div>
+                  <div className="text-white font-medium">{profileData.currentPosition.role}</div>
+                </div>
               </div>
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-600 font-mono text-sm w-24">Company</span>
-                <span className="text-neutral-300">{profileData.currentPosition.company}</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-600 font-mono text-sm w-24">Location</span>
-                <span className="text-neutral-300">{profileData.location}</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-neutral-600 font-mono text-sm w-24">Email</span>
-                <a href={`mailto:${profileData.email}`} className="text-neutral-300 hover:text-white transition-colors">
-                  {profileData.email}
-                </a>
+
+              <div className="bg-dark-700/50 border border-dark-600 rounded-xl p-4 flex items-center gap-4">
+                <div className="icon-box">
+                  <FaMapMarkerAlt className="text-white" />
+                </div>
+                <div>
+                  <div className="text-gray-400 text-sm">Location</div>
+                  <div className="text-white font-medium">{profileData.location}</div>
+                </div>
               </div>
             </div>
 
-            {/* Expertise */}
-            <div className="pt-8 border-t border-neutral-800">
-              <h4 className="font-mono text-sm text-neutral-500 mb-4 uppercase tracking-wider">Core Expertise</h4>
-              <div className="flex flex-wrap gap-3">
+            {/* Expertise list */}
+            <div className="bg-dark-700/30 border border-dark-600 rounded-2xl p-6">
+              <h4 className="text-lg font-semibold mb-4 flex items-center gap-2">
+                <span className="text-primary-400">Core Expertise</span>
+              </h4>
+              <div className="grid sm:grid-cols-2 gap-3">
                 {profileData.expertise.map((skill, index) => (
-                  <span
+                  <div
                     key={index}
-                    className="px-4 py-2 text-sm text-neutral-400 border border-neutral-800 hover:border-neutral-600 hover:text-white transition-all duration-200"
+                    className="flex items-center gap-3 text-gray-300"
                   >
-                    {skill}
-                  </span>
+                    <FaCheckCircle className="text-primary-500 flex-shrink-0" />
+                    <span>{skill}</span>
+                  </div>
                 ))}
               </div>
+            </div>
+
+            {/* Contact link */}
+            <div className="mt-8">
+              <a
+                href={`mailto:${profileData.email}`}
+                className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 transition-colors"
+              >
+                <FaEnvelope />
+                <span>{profileData.email}</span>
+              </a>
             </div>
           </div>
         </div>
