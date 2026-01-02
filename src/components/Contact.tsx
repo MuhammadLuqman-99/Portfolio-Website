@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaFacebook } from 'react-icons/fa';
+import { FaGithub, FaFacebook, FaArrowRight } from 'react-icons/fa';
 import { profileData } from '@/data/profile';
 
 export default function Contact() {
@@ -12,7 +12,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Create mailto link
     const mailtoLink = `mailto:${profileData.email}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     window.location.href = mailtoLink;
   };
@@ -25,77 +24,77 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 bg-dark-card/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+    <section id="contact" className="py-24 px-6 border-t border-neutral-900">
+      <div className="max-w-5xl mx-auto">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="font-mono text-sm text-neutral-500 tracking-wider">// contact</span>
+          <h2 className="text-4xl md:text-5xl font-light mt-4">
+            Get In Touch
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-            Have a project in mind? Let's work together to bring your ideas to life!
-          </p>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+          <div className="accent-line mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          {/* Contact info */}
+        <div className="grid md:grid-cols-2 gap-16">
+          {/* Left side - Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-6">Let's talk about your project</h3>
-            <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm always interested in hearing about new projects and opportunities.
-              Whether you have a question or just want to say hi, feel free to reach out!
+            <p className="text-neutral-500 leading-relaxed mb-10">
+              Have a project in mind? I'm always interested in hearing about new opportunities and ideas.
             </p>
 
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <FaEnvelope className="text-primary-400 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <a href={`mailto:${profileData.email}`} className="text-gray-300 hover:text-primary-400 transition-colors">
-                    {profileData.email}
-                  </a>
-                </div>
+            {/* Contact details */}
+            <div className="space-y-6 mb-10">
+              <div>
+                <span className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
+                  Email
+                </span>
+                <a
+                  href={`mailto:${profileData.email}`}
+                  className="text-neutral-300 hover:text-white transition-colors"
+                >
+                  {profileData.email}
+                </a>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <FaMapMarkerAlt className="text-primary-400 text-xl" />
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-gray-300">{profileData.location}</p>
-                </div>
+              <div>
+                <span className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
+                  Location
+                </span>
+                <span className="text-neutral-300">{profileData.location}</span>
               </div>
+            </div>
 
-              <div className="flex gap-4 pt-4">
+            {/* Social links */}
+            <div className="pt-8 border-t border-neutral-900">
+              <span className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-4">
+                Connect
+              </span>
+              <div className="flex gap-4">
                 <a
                   href={profileData.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center hover:bg-primary-500/30 transition-all"
+                  className="w-10 h-10 border border-neutral-800 flex items-center justify-center text-neutral-600 hover:text-white hover:border-neutral-600 transition-all"
                 >
-                  <FaGithub className="text-primary-400 text-xl" />
+                  <FaGithub size={16} />
                 </a>
                 <a
                   href={profileData.socials.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-primary-500/20 rounded-lg flex items-center justify-center hover:bg-primary-500/30 transition-all"
+                  className="w-10 h-10 border border-neutral-800 flex items-center justify-center text-neutral-600 hover:text-white hover:border-neutral-600 transition-all"
                 >
-                  <FaFacebook className="text-primary-400 text-xl" />
+                  <FaFacebook size={16} />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Contact form */}
-          <div className="glass p-8 rounded-xl">
+          {/* Right side - Form */}
+          <div>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold mb-2">
-                  Your Name
+                <label htmlFor="name" className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
+                  Name
                 </label>
                 <input
                   type="text"
@@ -104,14 +103,14 @@ export default function Contact() {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-dark-bg border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="John Doe"
+                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-800 text-white focus:outline-none focus:border-neutral-500 transition-colors placeholder-neutral-700"
+                  placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2">
-                  Your Email
+                <label htmlFor="email" className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
+                  Email
                 </label>
                 <input
                   type="email"
@@ -120,13 +119,13 @@ export default function Contact() {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-dark-bg border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="john@example.com"
+                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-800 text-white focus:outline-none focus:border-neutral-500 transition-colors placeholder-neutral-700"
+                  placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold mb-2">
+                <label htmlFor="subject" className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
                   Subject
                 </label>
                 <input
@@ -136,32 +135,33 @@ export default function Contact() {
                   required
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-dark-bg border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors"
-                  placeholder="Project Inquiry"
+                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-800 text-white focus:outline-none focus:border-neutral-500 transition-colors placeholder-neutral-700"
+                  placeholder="Project inquiry"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold mb-2">
+                <label htmlFor="message" className="font-mono text-xs text-neutral-600 uppercase tracking-wider block mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   required
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-dark-bg border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-800 text-white focus:outline-none focus:border-neutral-500 transition-colors resize-none placeholder-neutral-700"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-primary-600 hover:bg-primary-700 rounded-lg font-semibold transition-all transform hover:scale-105 glow"
+                className="group flex items-center gap-3 mt-8 text-white hover:text-neutral-300 transition-colors"
               >
-                Send Message
+                <span className="font-mono text-sm">Send Message</span>
+                <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
           </div>

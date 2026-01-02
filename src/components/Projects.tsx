@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { projects } from '@/data/projects';
-import { FaGithub, FaExternalLinkAlt, FaStar } from 'react-icons/fa';
+import { FaGithub, FaArrowRight } from 'react-icons/fa';
 
 export default function Projects() {
   const [filter, setFilter] = useState<string>('All');
@@ -12,28 +12,27 @@ export default function Projects() {
     : projects.filter(p => p.category === filter);
 
   return (
-    <section id="projects" className="py-20 px-4 bg-dark-card/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="gradient-text">Projects</span>
+    <section id="projects" className="py-24 px-6 border-t border-neutral-900">
+      <div className="max-w-6xl mx-auto">
+        {/* Section header */}
+        <div className="mb-16">
+          <span className="font-mono text-sm text-neutral-500 tracking-wider">// work</span>
+          <h2 className="text-4xl md:text-5xl font-light mt-4">
+            Projects
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
-            Showcase of my recent work combining marketing strategy and technical development
-          </p>
-          <div className="w-20 h-1 bg-primary-500 mx-auto"></div>
+          <div className="accent-line mt-6"></div>
         </div>
 
         {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap gap-2 mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setFilter(category)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+              className={`font-mono text-sm px-4 py-2 transition-all duration-200 ${
                 filter === category
-                  ? 'bg-primary-600 text-white glow'
-                  : 'glass hover:bg-white/10 text-gray-300'
+                  ? 'text-white bg-white/10'
+                  : 'text-neutral-600 hover:text-neutral-300'
               }`}
             >
               {category}
@@ -42,115 +41,95 @@ export default function Projects() {
         </div>
 
         {/* Projects grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
-            <div
+            <article
               key={project.id}
-              className="glass rounded-xl overflow-hidden hover:scale-105 transition-all duration-300 group"
+              className="group border border-neutral-900 hover:border-neutral-700 transition-all duration-300"
             >
-              {/* Project image */}
-              <div className="relative h-48 bg-gradient-to-br from-primary-600 to-primary-800 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-6xl">{getProjectIcon(project.category)}</span>
+              {/* Project header */}
+              <div className="p-6 border-b border-neutral-900">
+                <div className="flex items-start justify-between mb-4">
+                  <span className="font-mono text-xs text-neutral-600 uppercase tracking-wider">
+                    {project.category}
+                  </span>
+                  {project.featured && (
+                    <span className="font-mono text-xs text-neutral-500 border border-neutral-800 px-2 py-1">
+                      Featured
+                    </span>
+                  )}
                 </div>
-                {project.featured && (
-                  <div className="absolute top-4 right-4 bg-yellow-500 text-dark-bg px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-                    <FaStar /> Featured
-                  </div>
-                )}
+                <h3 className="text-xl font-light text-neutral-200 group-hover:text-white transition-colors">
+                  {project.title}
+                </h3>
               </div>
 
               {/* Project content */}
               <div className="p-6">
-                <div className="mb-3">
-                  <span className="text-primary-400 text-sm font-semibold">
-                    {project.category}
-                  </span>
-                </div>
-
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary-400 transition-colors">
-                  {project.title}
-                </h3>
-
-                <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                <p className="text-neutral-500 text-sm leading-relaxed mb-6 line-clamp-3">
                   {project.description}
                 </p>
 
                 {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.slice(0, 3).map((tech, index) => (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies.slice(0, 4).map((tech, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-primary-500/20 text-primary-300 rounded-full text-xs"
+                      className="font-mono text-xs text-neutral-600"
                     >
-                      {tech}
+                      {tech}{index < Math.min(project.technologies.length, 4) - 1 && ' /'}
                     </span>
                   ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
                 </div>
 
                 {/* Links */}
-                <div className="flex gap-3">
+                <div className="flex gap-4 pt-4 border-t border-neutral-900">
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 glass hover:bg-white/10 rounded-lg transition-all group/btn"
+                    className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors text-sm"
                   >
-                    <FaGithub className="group-hover/btn:scale-110 transition-transform" />
-                    <span className="text-sm">Code</span>
+                    <FaGithub />
+                    <span>Code</span>
                   </a>
                   {project.liveUrl && project.liveUrl !== '#' && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-700 rounded-lg transition-all group/btn"
+                      className="flex items-center gap-2 text-neutral-500 hover:text-white transition-colors text-sm group/link"
                     >
-                      <FaExternalLinkAlt className="group-hover/btn:scale-110 transition-transform" />
-                      <span className="text-sm">Demo</span>
+                      <span>Live</span>
+                      <FaArrowRight className="text-xs group-hover/link:translate-x-1 transition-transform" />
                     </a>
                   )}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">No projects found in this category.</p>
+            <p className="text-neutral-600 font-mono">No projects found.</p>
           </div>
         )}
 
         {/* View all on GitHub */}
-        <div className="text-center mt-12">
+        <div className="mt-16 pt-8 border-t border-neutral-900">
           <a
             href="https://github.com/MuhammadLuqman-99?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 glass hover:bg-white/10 rounded-lg transition-all group"
+            className="inline-flex items-center gap-3 text-neutral-500 hover:text-white transition-colors group"
           >
-            <FaGithub className="text-2xl group-hover:scale-110 transition-transform" />
-            <span className="font-semibold">View All Projects on GitHub</span>
+            <FaGithub size={20} />
+            <span className="font-mono text-sm">View all on GitHub</span>
+            <FaArrowRight className="text-xs group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
       </div>
     </section>
   );
-}
-
-// Helper function to get project icon
-function getProjectIcon(category: string): string {
-  const icons: { [key: string]: string } = {
-    'Digital Marketing': '📊',
-    'Web Development': '💻',
-    'Blockchain': '⛓️',
-    'Full Stack': '🚀'
-  };
-  return icons[category] || '💡';
 }
